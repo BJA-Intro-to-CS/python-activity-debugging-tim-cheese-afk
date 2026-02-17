@@ -59,8 +59,8 @@ average = get_average_price(products)
 print("Average price:", average)
 
 
-choice = input("Enter product name to buy: ")
-quantity = int(input("Enter quantity: "))
+choice = "Backpack"
+quantity = 5
 
 for product in products:
     if product["name"] == choice:
