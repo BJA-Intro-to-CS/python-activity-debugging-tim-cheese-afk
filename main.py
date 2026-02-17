@@ -19,7 +19,7 @@ def apply_discount(price, discount):
 def update_stock(products, product_name, amount):
     for product in products:
         if product["name"] == product_name:
-            product["stock"] = product["stock"] - amount
+            product["stock"] = product["stock"] + amount
     return product
 
 
@@ -60,11 +60,11 @@ print("Average price:", average)
 
 
 choice = input("Enter product name to buy: ")
-quantity = input("Enter quantity: ")
+quantity = int(input("Enter quantity: "))
 
 for product in products:
     if product["name"] == choice:
-        if quantity <= product["stock"]:
+        if quantity >= product["stock"]:
             product["stock"] = product["stock"] - quantity
             print("Purchase successful")
         else:
