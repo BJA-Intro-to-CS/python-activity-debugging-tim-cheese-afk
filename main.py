@@ -74,7 +74,7 @@ for product in products:
 count = 0
 while count < len(products):
     print(products[count]["name"])
-    count = count - 1
+    count = count + 1
 
 
 print("Done")
